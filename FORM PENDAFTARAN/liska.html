@@ -1,206 +1,202 @@
+<!DOCTYPE html>
+<!---Coding By CodingLab | www.codinglabweb.com--->
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>form pendaftaran</title>
-</head>
-<style>
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    body{
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-        background: linear-gradient(135deg, #71b7eb, #fff);
-    }
-    .container{
-        max-width: 700px;
-        width: 100%;
-        background-color: #fff;
-        padding: 25px 10px;
-        border-radius: 5px;
-        box-shadow: 25px 10px rgba(0, 0, 0, 0.15);
-    }
-    .container.title{
-        font-size: 25px;
-        font-weight: 500;
-        position: relative;
-    }
-    .container.title::before{
-       content: "";
-       position: absolute;
-       left: 0;
-       bottom: 0;
-       height: 3px;
-       width: 30px;
-       border-radius: 5px;
-       background: linear-gradient(135deg, #71b7eb, #fff);
-    }
-    .content form.user-details{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin: 20px 0 12px 0;  
-    }
-    form.user-details .input-box{
-        margin-bottom: 15px;
-        width: calc(100x/2-2opx);
-    }
-    form.input-box span.details{
-        display: block;
-        font-weight: 500;
-        margin-bottom: 5px;
-    }
-    .user-details .input-box input{
-        height: 45px;
-        width: 100%;
-        outline: none;
-        font-size: 10px;
-        border-radius: 5px;
-        padding-left: 15px;
-        border: 1px solid #ccc;
-        border-bottom-width: 2px;
-        transition: all 0.15 ease;
-    }
-    .user-details .input-box input:focus,
-    .user-details .input-box input:valid{
-        border-color: #9b59b6;
-    }
-    form .gender-details .gender-title{
-        font-size: 20px;
-        font-weight: 500;
-    }
-    form .category{
-        display: flex;
-        width: 80%;
-        margin: 14px 0;
-        justify-content: space-between;
-    }
-    form .category label{
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-    }
-    form .category label .dot{
-        height: 18px;
-        width: 18px;
-        border-radius: 50%;
-        margin-right: 30px;
-        background: #d9d9d9;
-        border: 5px solid transparent;
-        transition: all 0.15 ease;
-    }
-    #dot-1:checked ~ .category label .one,
-    #dot-2:checked ~ .category label .two,
-    #dot-3:checked ~ .category label .three{
-        background: #9b59b6;
-        border-color: #d9d9d9;
-    }
-    form input[type="radio"]{
-        display: none;
-    }
-    form.botton input{
-        height: 10px;
-        width: 100%;
-        border-radius: 5px;
-        border: none;
-        color: #fff;
-        font-size: 18px;
-        font-weight: 500;
-        letter-spacing: 1px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        background: linear-gradient(135deg, #71b7eb, #fff);
-    }
-    form .buttom input :hover{
-        background: linear-gradient(135deg, #71b7eb, #fff);
-    }
-    @media(max-width:584px){
-        .container{
-            max-width: 100%;
-        }
-    }
-    form .user-details .input-box{
-        margin-bottom: 15px;
-        width: 100%;
-    }
-    form.category{
-        width: 100%;
-    }
-    .content form .user-details{
-        max-height: 100px;
-        overflow-y: scroll;
-    }
-    .user-details ::-webkit-scrollbar{
-        width: 5px;
-    }
-    @media(max-width=459px){
-        .container .content .category{
-            flex-direction: column;
-        }
-    }
-</style>
-<body>
-    <div class="container">
-        <div class="content">
-            <form action="a">
-                <div class="user-detail">
-                    <div class="input-inbox">
-                        <span class="details">Nama Lengkap</span>
-                        <input type="text" placeholder="masukan nama lengkap" required>
-                    </div>
-                    <div class="input-inbox">
-                        <span class="details">Username</span>
-                        <input type="text" placeholder="masukan username" required>
-                    </div>
-                    <div class="input-inbox">
-                        <span class="details">Email</span>
-                        <input type="text" placeholder="masukan email" required>
-                    </div>
-                    <div class="input-inbox">
-                        <span class="details">Nomor telepon</span>
-                        <input type="text" placeholder="masukan nomor telepon" required>
-                    </div>
-                    <div class="input-inbox">
-                        <span class="details">Password</span>
-                        <input type="text" placeholder="masukan password" required>
-                    </div>
-                    <div class="input-inbox">
-                        <span class="details">Ulang password</span>
-                        <input type="text" placeholder="masukan ulang password" required>
-                    </div>
-                    <div class="gender-details">
-                        <input type="radio" nama="gender" id="dot-1">
-                        <input type="radio" nama="gender" id="dot-2">
-                        <input type="radio" nama="gender" id="dot-3">
-                        <span class="gender-title">Jenis Kelamin</span>
-                        <div class="category">
-                            <label for="dot-1">
-                                <span class="dot one"></span>
-                                <span class="gender">Pria</span>
-                            </label>
-                            <label for="dot-2">
-                                <span class="dot two"></span>
-                                <span class="gender">wanita</span>
-                            </label>
-                            <label for="dot-3">
-                                <span class="dot three"></span>
-                                <span class="gender">lainnya</span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="button">
-                        <input type="submit" value="Daftar">
-                    </div>
-                </div>
-            </form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Registration Form in HTML CSS</title>
+    <!---Custom CSS File--->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <header>Registration Form</header>
+      <form action="#" class="form">
+        <div class="input-box">
+          <label>Full Name</label>
+          <input type="text" placeholder="Enter full name" required />
         </div>
-    </div>
-</body>
+
+        <div class="input-box">
+          <label>Email Address</label>
+          <input type="text" placeholder="Enter email address" required />
+        </div>
+
+        <div class="column">
+          <div class="input-box">
+            <label>Phone Number</label>
+            <input type="number" placeholder="Enter phone number" required />
+          </div>
+          <div class="input-box">
+            <label>Birth Date</label>
+            <input type="date" placeholder="Enter birth date" required />
+          </div>
+        </div>
+        <div class="gender-box">
+          <h3>Gender</h3>
+          <div class="gender-option">
+            <div class="gender">
+              <input type="radio" id="check-male" name="gender" checked />
+              <label for="check-male">male</label>
+            </div>
+            <div class="gender">
+              <input type="radio" id="check-female" name="gender" />
+              <label for="check-female">Female</label>
+            </div>
+            <div class="gender">
+              <input type="radio" id="check-other" name="gender" />
+              <label for="check-other">prefer not to say</label>
+            </div>
+          </div>
+        </div>
+        <div class="input-box address">
+          <label>Address</label>
+          <input type="text" placeholder="Enter street address" required />
+          <input type="text" placeholder="Enter street address line 2" required />
+          <div class="column">
+            <div class="select-box">
+              <select>
+                <option hidden>Country</option>
+                <option>America</option>
+                <option>Japan</option>
+                <option>India</option>
+                <option>Nepal</option>
+              </select>
+            </div>
+            <input type="text" placeholder="Enter your city" required />
+          </div>
+          <div class="column">
+            <input type="text" placeholder="Enter your region" required />
+            <input type="number" placeholder="Enter postal code" required />
+          </div>
+        </div>
+        <button>Submit</button>
+      </form>
+    </section>
+    <style>
+        /* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgb(130, 106, 251);
+}
+.container {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.container header {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 500;
+  text-align: center;
+}
+.container .form {
+  margin-top: 30px;
+}
+.form .input-box {
+  width: 100%;
+  margin-top: 20px;
+}
+.input-box label {
+  color: #333;
+}
+.form :where(.input-box input, .select-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+.input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.form .column {
+  display: flex;
+  column-gap: 15px;
+}
+.form .gender-box {
+  margin-top: 20px;
+}
+.gender-box h3 {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.form :where(.gender-option, .gender) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+.form .gender {
+  column-gap: 5px;
+}
+.gender input {
+  accent-color: rgb(130, 106, 251);
+}
+.form :where(.gender input, .gender label) {
+  cursor: pointer;
+}
+.gender label {
+  color: #707070;
+}
+.address :where(input, .select-box) {
+  margin-top: 15px;
+}
+.select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #707070;
+  font-size: 1rem;
+}
+.form button {
+  height: 55px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: rgb(130, 106, 251);
+}
+.form button:hover {
+  background: rgb(88, 56, 250);
+}
+/*Responsive*/
+@media screen and (max-width: 500px) {
+  .form .column {
+    flex-wrap: wrap;
+  }
+  .form :where(.gender-option, .gender) {
+    row-gap: 15px;
+  }
+}
+    </style>
+  </body>
 </html>
